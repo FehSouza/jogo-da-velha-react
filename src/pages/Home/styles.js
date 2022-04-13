@@ -13,8 +13,25 @@ export const ContentLeft = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  justify-content: space-between;
+  padding: 50px 0;
   box-sizing: border-box;
+`;
+
+export const WrapperPlayers = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const WrapperPlayer2 = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 `;
 
 export const ContentCenter = styled.section`
@@ -33,12 +50,4 @@ export const ContentRight = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const WrapperPlayer2 = styled.div`
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;

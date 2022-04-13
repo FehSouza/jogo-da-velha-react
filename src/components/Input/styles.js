@@ -12,7 +12,6 @@ export const Container = styled.input`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textGrey};
-  margin-top: 20px;
   &:hover {
     cursor: text;
   }

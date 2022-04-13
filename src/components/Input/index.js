@@ -1,9 +1,5 @@
 import * as S from './styles';
 
-export const Input = ({ placeholder, disabled }) => {
-  return disabled ? (
-    <S.Container disabled placeholder={placeholder}></S.Container>
-  ) : (
-    <S.Container placeholder={placeholder}></S.Container>
-  );
+export const Input = ({ placeholder, disabled, value, onChange }) => {
+  return <S.Container disabled={disabled} value={value} onChange={onChange} placeholder={placeholder}></S.Container>;
 };

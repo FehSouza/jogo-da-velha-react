@@ -1,20 +1,34 @@
 import { useState } from 'react';
-import { Input, Switch } from '../../components';
+import { Button, Input, MatchType, Switch } from '../../components';
 import * as S from './styles';
 
 export const Home = () => {
   const [disablePlayer, setDisablePlayer] = useState(true);
+  const [valuePlayer1, setValuePlayer1] = useState('');
+  const [valuePlayer2, setValuePlayer2] = useState('');
 
-  const handleTogglePlayer = () => setDisablePlayer(!disablePlayer);
+  const handleTogglePlayer = () => {
+    setDisablePlayer(!disablePlayer);
+    setValuePlayer2('');
+  };
 
   return (
     <S.Container>
       <S.ContentLeft>
-        <Input placeholder="Jogador 1" />
-        <S.WrapperPlayer2>
-          <Input placeholder="Jogador 2" disabled={disablePlayer}></Input>
-          <Switch toggleSwitch={handleTogglePlayer} status={disablePlayer}></Switch>
-        </S.WrapperPlayer2>
+        <S.WrapperPlayers>
+          <Input placeholder="Jogador 1" value={valuePlayer1} onChange={(e) => setValuePlayer1(e.target.value)} />
+          <S.WrapperPlayer2>
+            <Input
+              placeholder="Jogador 2"
+              value={valuePlayer2}
+              onChange={(e) => setValuePlayer2(e.target.value)}
+              disabled={disablePlayer}
+            />
+            <Switch outlined toggleSwitch={handleTogglePlayer} status={disablePlayer} />
+          </S.WrapperPlayer2>
+        </S.WrapperPlayers>
+        <MatchType />
+        <Button>Jogar</Button>
       </S.ContentLeft>
 
       <S.ContentCenter></S.ContentCenter>
