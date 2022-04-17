@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Board, Button, History, Input, MatchType, Scoreboard, Switch } from '../../components';
+import { Board, Button, History, Input, MatchType, PlayHistory, Scoreboard, Switch } from '../../components';
 import * as S from './styles';
 
 export const Home = () => {
@@ -40,7 +40,9 @@ export const Home = () => {
         <Board />
       </S.ContentCenter>
 
-      <S.ContentRight></S.ContentRight>
+      <S.ContentRight>
+        <PlayHistory />
+      </S.ContentRight>
     </S.Container>
   );
 };

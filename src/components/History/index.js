@@ -11,6 +11,7 @@ export const History = () => {
         <HistoryItem />
         <HistoryItem />
         <HistoryItem />
+        <HistoryItem />
       </S.HistoryList>
     </S.Container>
   );

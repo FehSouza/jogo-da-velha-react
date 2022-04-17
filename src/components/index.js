@@ -4,5 +4,7 @@ export * from './History';
 export * from './HistoryItem';
 export * from './Input';
 export * from './MatchType';
+export * from './PlayHistory';
+export * from './PlayHistoryItem';
 export * from './Scoreboard';
 export * from './Switch';

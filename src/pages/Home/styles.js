@@ -12,7 +12,7 @@ export const ContentLeft = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 8px;
+  padding: 50px 4px;
   box-sizing: border-box;
 `;
 
@@ -48,7 +48,7 @@ export const ContentRight = styled.section`
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-direction: column;
-  padding: 50px 8px;
+  padding: 50px 4px;
   box-sizing: border-box;
   align-items: center;
 `;

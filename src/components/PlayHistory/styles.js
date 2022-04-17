@@ -3,31 +3,27 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  margin-top: 40px;
-  /* padding-bottom: 36px; */
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  max-height: 50%;
-  `;
+  max-height: 100%;
+`;
 
-export const HistoryTitle = styled.h2`
-  margin: 0;
-  color: ${({ theme }) => theme.colors.textWhite};
+export const Title = styled.h2`
   font-size: 16px;
   font-weight: 700;
+  color: ${({ theme }) => theme.colors.textWhite};
+  margin: 0;
   text-align: center;
-  `;
+`;
 
-export const HistoryList = styled.ul`
+export const List = styled.ul`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
   margin-top: 8px;
+  flex: 1;
   overflow-y: auto;
   &::-webkit-scrollbar {
     width: 8px;
