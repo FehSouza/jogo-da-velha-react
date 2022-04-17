@@ -7,14 +7,12 @@ export const Container = styled.main`
 `;
 
 export const ContentLeft = styled.section`
-  width: 25%;
-  height: 100%;
+  flex: 1;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 8px;
   box-sizing: border-box;
 `;
 
@@ -35,19 +33,22 @@ export const WrapperPlayer2 = styled.div`
 `;
 
 export const ContentCenter = styled.section`
-  width: 50%;
+  width: 45%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.primaryA};
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0;
+  box-sizing: border-box;
 `;
 
 export const ContentRight = styled.section`
-  width: 25%;
-  height: 100%;
+  flex: 1;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-direction: column;
+  padding: 50px 8px;
+  box-sizing: border-box;
   align-items: center;
 `;

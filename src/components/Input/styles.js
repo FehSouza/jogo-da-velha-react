@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.input`
-  width: 80%;
+  width: 85%;
   height: 44px;
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 10px;

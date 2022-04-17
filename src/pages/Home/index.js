@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Input, MatchType, Switch } from '../../components';
+import { Board, Button, History, Input, MatchType, Scoreboard, Switch } from '../../components';
 import * as S from './styles';
 
 export const Home = () => {
@@ -28,10 +28,17 @@ export const Home = () => {
           </S.WrapperPlayer2>
         </S.WrapperPlayers>
         <MatchType />
-        <Button>Jogar</Button>
+        <Button marginTop="40px" toPlay={1}>
+          Jogar
+        </Button>
+        <History />
+        <Button marginTop="10px">Reiniciar</Button>
       </S.ContentLeft>
 
-      <S.ContentCenter></S.ContentCenter>
+      <S.ContentCenter>
+        <Scoreboard />
+        <Board />
+      </S.ContentCenter>
 
       <S.ContentRight></S.ContentRight>
     </S.Container>

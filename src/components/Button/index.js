@@ -1,7 +1,9 @@
-import * as S from './styles'
+import * as S from './styles';
 
-export const Button = ({children}) => {
+export const Button = ({ children, marginTop, toPlay }) => {
   return (
-    <S.Container>{children}</S.Container>
-  )
-}
+    <S.Container marginTop={marginTop} toPlay={toPlay}>
+      {children}
+    </S.Container>
+  );
+};

@@ -14,7 +14,7 @@ export const Container = styled.div`
   border: 1.5px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 100px;
   z-index: 5;
-  right: calc((100% - 80%) / 2);
+  right: calc((100% - 85%) / 2);
   top: 8px;
   padding: 4px;
   box-sizing: border-box;
@@ -32,4 +32,5 @@ export const Wrapper = styled.div`
   border-radius: 100%;
   margin-left: ${({ active }) => (active ? 21 : 0)}px;
   transition-duration: 250ms;
+  user-select: none;
 `;
