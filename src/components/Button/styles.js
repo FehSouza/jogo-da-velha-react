@@ -34,5 +34,14 @@ export const Container = styled.button`
     background-color: ${({ theme }) => lighten(0.4, theme.colors.textGrey)};
     border-color: ${({ theme }) => lighten(0.4, theme.colors.textGrey)};
   }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: ${({ theme }) => theme.colors.disabled};
+    border-color: ${({ theme }) => theme.colors.disabled};
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.disabled};
+      border-color: ${({ theme }) => theme.colors.disabled};
+    }
+  }
   ${({ toPlay }) => toPlay && toPlayStyle}
 `;

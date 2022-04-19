@@ -36,3 +36,11 @@ export const List = styled.ul`
     border: 2.5px solid ${({ theme }) => theme.colors.primaryA};
   }
 `;
+
+export const NoHasHistoryItem = styled.span`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.textWhite};
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 12px;
+`;

@@ -1,13 +1,13 @@
 import * as S from './styles';
 
-export const Scoreboard = () => {
+export const Scoreboard = ({namePlayer1, namePlayer2}) => {
   return (
     <S.Container>
       <S.ScoreboardTitle>Placar</S.ScoreboardTitle>
       <S.ScoreboardWrapper>
-        <S.ScorePlayer1>01</S.ScorePlayer1>
-        <S.PlayerWinning>Jogador 1</S.PlayerWinning>
-        <S.ScorePlayer2>01</S.ScorePlayer2>
+        <S.ScorePlayer1>00</S.ScorePlayer1>
+        <S.PlayerWinning>{namePlayer1}</S.PlayerWinning>
+        <S.ScorePlayer2>00</S.ScorePlayer2>
       </S.ScoreboardWrapper>
     </S.Container>
   );

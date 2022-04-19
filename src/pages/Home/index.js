@@ -4,6 +4,7 @@ import * as S from './styles';
 
 export const Home = () => {
   const [disablePlayer, setDisablePlayer] = useState(true);
+  const [disablePlay, setDisablePlay] = useState(true);
   const [valuePlayer1, setValuePlayer1] = useState('');
   const [valuePlayer2, setValuePlayer2] = useState('');
 
@@ -11,6 +12,12 @@ export const Home = () => {
     setDisablePlayer(!disablePlayer);
     setValuePlayer2('');
   };
+
+  const handleTogglePlay = () => {
+    setDisablePlay(!disablePlay);
+    console.log(disablePlay)
+
+  }
 
   return (
     <S.Container>
@@ -28,16 +35,16 @@ export const Home = () => {
           </S.WrapperPlayer2>
         </S.WrapperPlayers>
         <MatchType />
-        <Button marginTop="40px" toPlay={1}>
+        <Button disabled={!disablePlay} marginTop="40px" toPlay={1} onClick={handleTogglePlay}>
           Jogar
         </Button>
         <History />
-        <Button marginTop="10px">Reiniciar</Button>
+        <Button disabled={!!disablePlay} marginTop="10px" onClick={handleTogglePlay}>Reiniciar</Button>
       </S.ContentLeft>
 
       <S.ContentCenter>
-        <Scoreboard />
-        <Board />
+        <Scoreboard namePlayer1={valuePlayer1} namePlayer2={valuePlayer2} />
+        <Board disabled={!!disablePlay} />
       </S.ContentCenter>
 
       <S.ContentRight>

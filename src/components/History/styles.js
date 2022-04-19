@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex: 1;
   max-height: 50%;
-  `;
+`;
 
 export const HistoryTitle = styled.h2`
   margin: 0;
@@ -18,7 +18,7 @@ export const HistoryTitle = styled.h2`
   font-size: 16px;
   font-weight: 700;
   text-align: center;
-  `;
+`;
 
 export const HistoryList = styled.ul`
   width: 100%;
@@ -39,4 +39,12 @@ export const HistoryList = styled.ul`
     background-color: ${({ theme }) => lighten(0.2, theme.colors.primary)};
     border: 2.5px solid ${({ theme }) => theme.colors.primaryA};
   }
+`;
+
+export const NoHasHistoryItem = styled.span`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.textWhite};
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 12px;
 `;
