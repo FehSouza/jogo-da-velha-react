@@ -1,5 +1,11 @@
 import { lighten } from 'polished';
 import styled from 'styled-components';
+import { css } from 'styled-components';
+
+const winnerStyle = css`
+  border: 2px solid limegreen;
+  color: limegreen;
+`;
 
 export const Container = styled.div`
   width: 70%;
@@ -22,6 +28,7 @@ export const Field = styled.button`
   font-size: 130px;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.textGrey};
+  ${({ winner }) => winner && winnerStyle};
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => lighten(0.4, theme.colors.textGrey)};

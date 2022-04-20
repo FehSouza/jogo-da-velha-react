@@ -7,6 +7,7 @@ export const Home = () => {
   const [disablePlay, setDisablePlay] = useState(true);
   const [valuePlayer1, setValuePlayer1] = useState('');
   const [valuePlayer2, setValuePlayer2] = useState('');
+  const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
 
   const handleTogglePlayer = () => {
     setDisablePlayer(!disablePlayer);
@@ -15,9 +16,8 @@ export const Home = () => {
 
   const handleTogglePlay = () => {
     setDisablePlay(!disablePlay);
-    console.log(disablePlay)
-
-  }
+    console.log(disablePlay);
+  };
 
   return (
     <S.Container>
@@ -39,12 +39,14 @@ export const Home = () => {
           Jogar
         </Button>
         <History />
-        <Button disabled={!!disablePlay} marginTop="10px" onClick={handleTogglePlay}>Reiniciar</Button>
+        <Button disabled={!!disablePlay} marginTop="10px" onClick={handleTogglePlay}>
+          Reiniciar
+        </Button>
       </S.ContentLeft>
 
       <S.ContentCenter>
         <Scoreboard namePlayer1={valuePlayer1} namePlayer2={valuePlayer2} />
-        <Board disabled={!!disablePlay} />
+        <Board disabled={!!disablePlay} board={board} setBoard={setBoard} />
       </S.ContentCenter>
 
       <S.ContentRight>
